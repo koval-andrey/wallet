@@ -12,10 +12,16 @@ const register = async (req, res, next) => {
       })
       return
     }
-    await service.add({ email, password })
+    const user = await service.add({ email, password })
+    const userInfo = {
+      email: user.email,
+      subscription: user.subscription,
+      avatarUrl: user.avatarUrl,
+    }
     res.status(201).json({
       status: 'success',
       code: 201,
+      data: { user: userInfo },
       message: 'success'
     })
   } catch (error) {
