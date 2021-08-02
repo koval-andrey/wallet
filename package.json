@@ -35,5 +35,21 @@
     "mongodb": "^4.0.0",
     "nodemon": "^2.0.12",
     "uuid": "^8.3.2"
-  }
+  },
+  "description": "Выполните форк этого репозитория для выполнения домашних заданий (2-6)\r Форк создаст репозиторий на вашем http://github.com",
+  "main": ".eslintrc.js",
+  "bin": {
+    "template": "server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koval-andrey/nodejs-homework-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koval-andrey/nodejs-homework-template/issues"
+  },
+  "homepage": "https://github.com/koval-andrey/nodejs-homework-template#readme"
 }

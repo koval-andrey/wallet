@@ -8,4 +8,4 @@ module.exports = {
   logout,
   register,
   updateAvatar,
-};
+}

@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
-const { auth: ctrl } = require('../controllers')
-const { authenticate } = require('../middlewares')
+const { auth: ctrl } = require('../../../controllers/contacts')
+const { authenticate } = require('../../../middlewares')
 const multer = require('multer')
 
 const router = express.Router()

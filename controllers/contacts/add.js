@@ -1,5 +1,5 @@
 
-const { Contact } = require('../service')
+const { Contact } = require('../../services')
 
 const addContact = async (req, res, next) => {
   const { body } = req
