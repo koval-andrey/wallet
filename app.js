@@ -3,20 +3,22 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 require('dotenv').config()
 require('./configs/passport-config')
-const api = require('./api/auth')
-
 const { DB_HOST, PORT = 3000 } = process.env
 
-const router = require('./routes/api/contacts')
+const {
+  routerAuth,
+  routerContacts,
+  routerUser,
+} = require('./routes/api')
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/contacts', router)
-app.use('/api/auth', api.auth)
-app.use('/api/users', api.users)
+app.use('/api/contacts', routerContacts)
+app.use('/api/auth', routerAuth)
+app.use('/api/user', routerUser)
 
 app.use((req, res) => {
   res.status(404).json({

@@ -1,10 +1,10 @@
 const express = require('express')
 const path = require('path')
-const { auth: ctrl } = require('../../../controllers/contacts')
+const { auth: ctrl } = require('../../../controllers')
 const { authenticate } = require('../../../middlewares')
 const multer = require('multer')
 
-const router = express.Router()
+const routerAuth = express.Router()
 
 const tempDir = path.join(process.cwd(), 'temp')
 
@@ -30,15 +30,15 @@ const uploadMiddleware = multer({
   storage,
 })
 
-router.post('/register', express.json(), ctrl.register)
-router.post('/login', express.json(), ctrl.login)
-router.get('/logout', authenticate, ctrl.logout)
-router.get('/current', authenticate, ctrl.getProfile)
-router.patch(
+routerAuth.post('/register', express.json(), ctrl.register)
+routerAuth.post('/login', express.json(), ctrl.login)
+routerAuth.get('/logout', authenticate, ctrl.logout)
+routerAuth.get('/current', authenticate, ctrl.getProfile)
+routerAuth.patch(
   '/avatars',
   authenticate,
   uploadMiddleware.single('avatar'),
   ctrl.updateAvatar
 )
 
-module.exports = router
+module.exports = routerAuth

@@ -1,6 +1,6 @@
 const { Contact } = require('../../services')
 
-const listContact = async (req, res, next) => {
+const listContacts = async (req, res, next) => {
   try {
     const result = await Contact.find()
 
@@ -12,8 +12,7 @@ const listContact = async (req, res, next) => {
       },
     })
   } catch (error) {
-    console.error(error)
     next(error)
   }
 }
-module.exports = listContact
+module.exports = listContacts

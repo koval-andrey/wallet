@@ -1,4 +1,5 @@
-const user = require('./api/user')
-const contacts = require('./api/contacts')
+const routerAuth = require('./api/auth')
+const routerContacts = require('./api/contacts')
+const routerUser = require('./api/user')
 
-module.exports = { user, contacts }
+module.exports = { routerAuth, routerContacts, routerUser }

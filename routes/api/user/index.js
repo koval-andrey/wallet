@@ -1,7 +1,3 @@
-const auth = require('./auth')
-const users = require('./users')
+const routerUser = require('./users')
 
-module.exports = {
-  auth,
-  users
-}
+module.exports = routerUser
