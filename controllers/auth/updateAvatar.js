@@ -1,6 +1,6 @@
 
 const path = require('path')
-const fs = require('fs/promises')
+const fs = require('fs').promises
 const jimp = require('jimp')
 
 // const { v4 } = require("uuid");
