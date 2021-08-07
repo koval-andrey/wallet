@@ -1,9 +1,10 @@
-const contactSchema = require('./contactSchema')
-const Contact = require('./contact')
-const user = require('./user')
+const { contactSchema, Contact } = require('./contacts')
+
+const { User, userSchema } = require('./user')
 
 module.exports = {
   contactSchema,
   Contact,
-  user
+  User,
+  userSchema,
 }
