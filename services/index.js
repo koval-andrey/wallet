@@ -1,10 +1,10 @@
 const { contactSchema, Contact } = require('./contacts')
 
-const { User, userSchema } = require('./user')
+const { user, userSchema } = require('./user')
 
 module.exports = {
   contactSchema,
   Contact,
-  User,
+  user,
   userSchema,
 }

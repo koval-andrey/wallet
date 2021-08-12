@@ -24,3 +24,5 @@ const mail = {
 transporter.sendMail(mail)
   .then(info => console.log(info))
   .catch(error => console.log(error))
+
+module.exports = transporter

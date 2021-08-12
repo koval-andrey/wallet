@@ -3,6 +3,7 @@ const logout = require('./logout')
 const register = require('./register')
 const updateAvatar = require('./updateAvatar')
 const getProfile = require('./getProfile')
+const verify = require('./verify')
 
 module.exports = {
   login,
@@ -10,4 +11,5 @@ module.exports = {
   register,
   updateAvatar,
   getProfile,
+  verify
 }

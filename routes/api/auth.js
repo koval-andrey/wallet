@@ -34,6 +34,7 @@ routerAuth.post('/register', express.json(), ctrl.register)
 routerAuth.post('/login', express.json(), ctrl.login)
 routerAuth.get('/logout', authenticate, ctrl.logout)
 routerAuth.get('/current', authenticate, ctrl.getProfile)
+routerAuth.get('/verify/:token', authenticate, ctrl.verify)
 routerAuth.patch(
   '/avatars',
   authenticate,

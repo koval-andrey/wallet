@@ -1,5 +1,6 @@
-const { User: service } = require('../../services')
-
+const { user: service } = require('../../services')
+const nanoid = require('nanoid')
+const verifyToken = nanoid()
 const register = async (req, res, next) => {
   const { email, password } = req.body
   try {
@@ -12,11 +13,11 @@ const register = async (req, res, next) => {
       })
       return
     }
-    const user = await service.add({ email, password })
+    const user = await service.add({ email, password, verifyToken })
     const userInfo = {
       email: user.email,
       subscription: user.subscription,
-      avatarUrl: user.avatarUrl,
+
     }
     res.status(201).json({
       status: 'success',
