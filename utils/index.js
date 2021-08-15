@@ -1,3 +1,3 @@
-const transporter = require('./nodemailer')
+const mailNodemailer = require('./nodemailer')
 
-module.exports = transporter
+module.exports = mailNodemailer

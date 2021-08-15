@@ -14,15 +14,19 @@ const nodemailerConfig = {
 }
 
 const transporter = nodemailer.createTransport(nodemailerConfig)
-const mail = {
-  from: 'koval_andrey1234@meta.ua',
-  to: 'kovalandrey1234@gmail.com',
-  subject: 'test mail',
-  text: 'Hello world!'
+const mailNodemailer = async ({ to, subject, text, html }) => {
+  const mail = {
+    from: 'koval_andrey1234@meta.ua',
+    to: 'kovalandrey1234@gmail.com',
+    subject: 'test mail',
+    text: 'Hello world!'
+  }
+
+  transporter.sendMail(mail)
+    .then(info => console.log(info))
+    .catch(error => console.log(error))
+
+  const answer = await transporter.sendMail(mail)
+  return answer
 }
-
-transporter.sendMail(mail)
-  .then(info => console.log(info))
-  .catch(error => console.log(error))
-
-module.exports = transporter
+module.exports = mailNodemailer
