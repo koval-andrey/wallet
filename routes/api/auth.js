@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const { auth: ctrl } = require('../../controllers')
-const { authenticate } = require('../../middlewares')
+const { authenticate, validate } = require('../../middlewares')
 const multer = require('multer')
 
 const routerAuth = express.Router()
@@ -35,6 +35,7 @@ routerAuth.post('/login', express.json(), ctrl.login)
 routerAuth.get('/logout', authenticate, ctrl.logout)
 routerAuth.get('/current', authenticate, ctrl.getProfile)
 routerAuth.get('/verify/:token', authenticate, ctrl.verify)
+routerAuth.post('/verify', validate, ctrl.verifyEmail)
 routerAuth.patch(
   '/avatars',
   authenticate,
