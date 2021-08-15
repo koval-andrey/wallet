@@ -11,5 +11,5 @@ module.exports = {
   register,
   updateAvatar,
   getProfile,
-  verify
+  verify,
 }

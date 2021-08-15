@@ -11,7 +11,7 @@ const verify = async (req, res, next) => {
         message: 'Your verification token is not valid',
       })
     }
-    await service.updateById(user.id, { verifyToken })
+    await service.updateById(user._id, { verify: true, verifytoken: '' })
 
     res.status(200).json({
       status: 'success',
