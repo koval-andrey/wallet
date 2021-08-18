@@ -1,3 +1,4 @@
 const user = require('./user')
+const userSchema = require('./schemas')
 
-module.exports = user
+module.exports = { user, userSchema }
