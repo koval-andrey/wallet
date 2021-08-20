@@ -1,4 +1,4 @@
-const express = require('express')
+/* const express = require('express')
 const path = require('path')
 const { auth: ctrl } = require('../../controllers')
 const { authenticate, validate } = require('../../middlewares')
@@ -43,4 +43,4 @@ routerAuth.patch(
   ctrl.updateAvatar
 )
 
-module.exports = routerAuth
+module.exports = routerAuth */

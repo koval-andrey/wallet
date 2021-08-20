@@ -1,4 +1,4 @@
 const auth = require('./auth')
-const contacts = require('./contacts')
+const wallet = require('./wallet')
 
-module.exports = { auth, contacts }
+module.exports = { auth, wallet }

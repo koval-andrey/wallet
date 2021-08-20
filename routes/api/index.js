@@ -1,4 +1,4 @@
-const routerAuth = require('./auth')
-const routerContacts = require('./contacts')
+const authRouter = require('./auth')
+const walletRouter = require('./wallet')
 
-module.exports = { routerAuth, routerContacts }
+module.exports = { authRouter, walletRouter }

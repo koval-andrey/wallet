@@ -6,16 +6,16 @@ require('./configs/passport-config')
 const { DB_HOST, PORT = 3000 } = process.env
 
 const {
-  routerAuth,
-  routerContacts,
+  authRouter,
+  walletRouter,
 } = require('./routes/api')
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/contacts', routerContacts)
-app.use('/api/users', routerAuth)
+app.use('/api/transactions', walletRouter)
+app.use('/api/users', authRouter)
 
 app.use((req, res) => {
   res.status(404).json({
