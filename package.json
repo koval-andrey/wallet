@@ -17,13 +17,15 @@
     "gravatar": "^1.8.1",
     "joi": "^17.4.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.5",
+    "mongoose": "^5.13.7",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "nanoid": "^3.1.25",
     "nodemailer": "^6.6.3",
     "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
